@@ -1,0 +1,21 @@
+source ~/ocp4_home.config
+
+oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+
+oc new-project ${RHT_OCP4_DEV_USER}-mysql-ocp-demo
+
+oc new-app \
+--docker-image=registry.access.redhat.com/rhscl/mysql-57-rhel7:latest \
+--name=mysql-ocp \
+-e MYSQL_USER=demouser -e MYSQL_PASSWORD=redhat -e MYSQL_DATABASE=demodb \
+-e MYSQL_ROOT_PASSWORD=r00tpa55
+
+oc expose service mysql-ocp
+
+oc get routes
+
+oc port-forward mysql-ocp-1-<REPLACE_ME> 3306:3306
+
+mysql -u demouser -predhat --protocol tcp -h localhost
+
+show databases;
