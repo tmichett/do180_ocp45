@@ -1,0 +1,15 @@
+= Creating the Demo Application
+
+== Login
+
+[source,bash]
+----
+podman login registry.redhat.io
+----
+
+== Run the Setup Script
+
+[source,bash]
+----
+16:55 $ ./Multi-Podman.sh
+----
