@@ -1,0 +1,9 @@
+cakephp-mysql-persistent                        An example CakePHP application with a MySQL database. For more information ab...   22 (4 blank)      9
+dancer-mysql-persistent                         An example Dancer application with a MySQL database. For more information abo...   19 (5 blank)      9
+mysql-ephemeral                                 MySQL database service, without persistent storage. For more information abou...   8 (3 generated)   3
+mysql-persistent                                MySQL database service, with persistent storage. For more information about u...   9 (3 generated)   4
+processserver64-amq-mysql-persistent-s2i        An example BPM Suite application with A-MQ and a MySQL database. For more inf...   49 (13 blank)     14
+processserver64-mysql-persistent-s2i            An example BPM Suite application with a MySQL database. For more information...    40 (14 blank)     10
+sso72-mysql-persistent                          An example RH-SSO 7 application with a MySQL database. For more information a...   37 (20 blank)     9
+sso73-mysql-persistent                          An example application based on RH-SSO 7.3 image. For more information about...    38 (21 blank)     9
+sso73-ocp4-x509-mysql-persistent                An example application based on RH-SSO 7.3 image. For more information about...    24 (12 blank)     8
