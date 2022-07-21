@@ -28,9 +28,9 @@ $ lab multicontainer-application start
 the script will build and deploy the containers as well as implement a port forward to the MySQL container on port 3306.
 
 [WARNING]
-----
+====
 It is necessary to open a new terminal to load the database and retrieve the route.
-----
+====
 
 [source,bash]
 ----
