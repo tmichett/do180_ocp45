@@ -1,0 +1,49 @@
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+= Creating the Demo Application
+
+== Initialize the Environment and Download Starter Files
+
+[source,bash]
+----
+$ lab multicontainer-application start
+----
+
+== Run the Setup Script
+
+[source,bash]
+----
+16:55 $ ./OCP_Demo_Start.sh
+----
+
+the script will build and deploy the containers as well as implement a port forward to the MySQL container on port 3306.
+
+[WARNING]
+----
+It is necessary to open a new terminal to load the database and retrieve the route.
+----
+
+[source,bash]
+----
+16:55 $ ./Load_DB.sh
+----
+
+Using the URL provided, add */todo/* at the end of the route and paste into the Firefox browser on workstation.
+
+[source,bash]
+----
+13:11 $ oc get route
+NAME      HOST/PORT                                                PATH   SERVICES   PORT    TERMINATION   WILDCARD
+todoapi   todoapi-<MyUser>.<OCPApps>          todoapi    30080                 None
+----
+
+So URL in Firefox would be *https://todoapi-<MyUser>.<OCPApps>/todo/*
